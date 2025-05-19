@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="16dp"
+    tools:context=".SecondActivity">
+
+    <TextView
+        android:id="@+id/textViewWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/green_50"
+        android:contentDescription="Welcome message for second activity"
+        android:fontFamily="sans-serif-medium"
+        android:padding="8dp"
+        android:text="Welcome to Activity 2!"
+        android:textColor="@color/green_700"
+        android:textSize="26sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:contentDescription="Activity 2 illustration"
+        android:elevation="4dp"
+        android:src="@drawable/sample2"
+        app:layout_constraintBottom_toTopOf="@id/textInputLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewWelcome"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:hint="Type something"
+        app:boxStrokeColor="@color/green_700"
+        app:hintTextColor="@color/green_700"
+        app:layout_constraintBottom_toTopOf="@id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputField2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/green_200" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="12dp"
+        android:text="Show Toast"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:backgroundTint="@color/green_700"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout2"
+        app:rippleColor="@color/green_200" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
